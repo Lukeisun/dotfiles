@@ -1,0 +1,7 @@
+shell:
+  program: /usr/bin/fish
+window:
+  opacity: 0.75
+colors:
+  primary:
+    background: "#000000"

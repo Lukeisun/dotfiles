@@ -1,0 +1,42 @@
+{
+    "atomKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    "files.autoSave": "afterDelay",
+    "code-runner.runInTerminal": true,
+    "C_Cpp.updateChannel": "Insiders",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "files.associations": {
+        "*.module": ""
+    },
+    "sync.autoDownload": true,
+    "sync.autoUpload": true,
+    "sync.gist": "da218630677a969fd69c25c9c9bf4a4a",
+    "C_Cpp.commentContinuationPatterns": [
+
+        "/**"
+    ],
+    "C_Cpp.files.exclude": {
+    
+        "**/.vscode": true
+    },
+    "python.defaultInterpreterPath": "C:\\Users\\lukei\\anaconda3\\python.exe",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "One Dark Pro",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "terminal.integrated.inheritEnv": false,
+    "editor.fontFamily": "DroidSansMono NF",
+    "vscode_custom_css.imports": ["file:///C:\\Users\\lukei\\Documents\\customization\\styles.css"],
+    "vscode_custom_css.policy": true,
+    "terminal.integrated.fontFamily": "GoMono NF",
+    "terminal.integrated.defaultProfile.windows": "Git Bash"
+}
