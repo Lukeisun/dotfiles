@@ -25,5 +25,7 @@ config.window_padding = {
 	top = 0,
 	bottom = 0,
 }
+config.enable_wayland = false 
+-- config.front_end = "WebGpu"
 -- and finally, return the configuration to wezterm
 return config
