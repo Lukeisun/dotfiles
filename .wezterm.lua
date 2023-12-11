@@ -15,7 +15,7 @@ end
 -- For example, changing the color scheme:
 config.hide_tab_bar_if_only_one_tab = true
 config.window_decorations = "TITLE"
-config.font = wezterm.font 'Fira Code'
+config.font = wezterm.font 'Iosevka'
 config.color_scheme = 'Atom'
 config.window_background_opacity = .75
 config.default_prog = { '/usr/bin/fish', '-l' }
@@ -25,7 +25,7 @@ config.window_padding = {
 	top = 0,
 	bottom = 0,
 }
-config.enable_wayland = false 
+config.enable_wayland = false
 -- config.front_end = "WebGpu"
 -- and finally, return the configuration to wezterm
 return config

@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export EDITOR:nvim
 SETUVAR --export GIT_AUTHOR_EMAIL:lukeisun57\x40gmail\x2ecom
 SETUVAR --export GIT_AUTHOR_NAME:lukeisun
 SETUVAR --export GTK_THEME:Catppuccin\x2dMacchiato\x2dStandard\x2dSapphire\x2dDark
