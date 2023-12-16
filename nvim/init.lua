@@ -546,6 +546,7 @@ cmp.setup {
   },
   sources = {
     { name = 'nvim_lsp',
+      -- filter out 'Text' kind suggestions
       entry_filter = function(entry, _ctx)
         return require('cmp.types').lsp.CompletionItemKind[entry:get_kind()] ~= 'Text';
       end
