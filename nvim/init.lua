@@ -574,9 +574,12 @@ treesitter_parser_config.templ = {
 }
 
 vim.treesitter.language.register('templ', 'templ')
--- my keymwaps
+------- my keymwaps -------
+-- J/K move lines up/down
 vim.keymap.set('v', "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', "K", ":m '<-2<CR>gv=gv")
+-- terminal mode insert -> normal
+vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]])
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
