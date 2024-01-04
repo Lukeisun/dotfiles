@@ -17,3 +17,9 @@ feh, mako
 ```
 waybar hyprpaper 
 ```
+
+## Fonts
+a lot of waybar dots use `otf-font-awesome`
+```
+
+```
