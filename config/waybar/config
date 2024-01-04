@@ -7,7 +7,7 @@
 	// Choose the order of the modules
 	"modules-left": ["hyprland/workspaces", "hyprland/mode"],
 	"modules-center": ["hyprland/window"],
-	"modules-right": ["custom/arch_update", "custom/disk_home", "custom/disk_root","temperature", "cpu", "memory", "custom/mail", "network", "pulseaudio", "clock", "idle_inhibitor", "tray"],
+	"modules-right": ["custom/arch_update", "custom/disk_home", "custom/disk_root","temperature", "cpu", "memory", "custom/mail", "network", "pulseaudio", "clock", "idle_inhibitor", "tray", "battery"],
 
 	// Modules configuration
 	// "hyprland/workspaces": {
