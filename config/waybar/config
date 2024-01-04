@@ -1,13 +1,12 @@
 {
-	// "layer": "top", // Waybar at top layer
+	"layer": "top", // Waybar at top layer
 	// "position": "bottom", // Waybar position (top|bottom|left|right)
 	// "height": 14, // Waybar height (to be removed for auto height)
 	// "width": 1280, // Waybar width
-
 	// Choose the order of the modules
-	"modules-left": ["hyprland/workspaces", "hyprland/mode"],
+	"modules-left": ["hyprland/workspaces"],
 	"modules-center": ["hyprland/window"],
-	"modules-right": ["custom/arch_update", "custom/disk_home", "custom/disk_root","temperature", "cpu", "memory", "custom/mail", "network", "pulseaudio", "clock", "idle_inhibitor", "tray", "battery"],
+	"modules-right": ["custom/disk_home", "custom/disk_root","temperature", "cpu", "memory", "custom/mail", "network", "pulseaudio", "clock", "idle_inhibitor", "tray", "battery"],
 
 	// Modules configuration
 	// "hyprland/workspaces": {
@@ -25,38 +24,32 @@
 	// 		"default": ""
 	// 	}
 	// },
-	"hyprland/mode": {
-		"format": "{}"
-	},
 	"custom/arch_update": {
 		"format": "<span color='#589df6'></span>{}",
 		"interval": 30,
 		"exec": "~/.config/i3blocks/bin/arch_update.py -b '#e4e4e4' -u '#e4e4e4' -q"
 	},
 	"custom/disk_home": {
-		"format": "🏠 {} ",
+		"format": "~ {} ",
 		"interval": 30,
 		"exec": "df -h --output=avail $HOME | tail -1 | tr -d ' '"
 	},
 	"custom/disk_root": {
-		"format": "💽 {} ",
+		"format": "/ {} ",
 		"interval": 30,
 		"exec": "df -h --output=avail / | tail -1 | tr -d ' '"
 	},
 	"temperature": {
-		// "thermal-zone": 2,
-		// "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
 		"critical-threshold": 80,
-		// "format-critical": "{temperatureC}°C {icon}",
-		"format": "<span color='#e88939'>{icon}</span> {temperatureC}°C",
+		"format": "<span color='#e88939'>{icon}</span> {temperatureF}°F",
 		"format-icons": ["", "", ""]
 	},
 	"cpu": {
-		"format": "🏭 {usage}%",
+		"format": "CPU: {usage}%",
 		"tooltip": false
 	},
 	"memory": {
-		"format": "💾 {used:0.1f}G"
+		"format": "MEM: {used:0.1f}G"
 	},
 	"custom/mail": {
 		"format": "📩{}",
@@ -66,7 +59,8 @@
 	"network": {
 		"family": "ipv4",
 		// "interface": "wlp2*", // (Optional) To force the use of this interface
-		"format-wifi": "<span color='#589df6'></span> <span color='gray'>{essid}</span> {frequency} <span color='#589df6'>{signaldBm} dB</span> <span color='#589df6'>⇵</span> {bandwidthUpBits}/{bandwidthDownBits}",
+		// "format-wifi": "<span color='#589df6'></span> <span color='gray'> {essid}</span> {frequency} <span color='#589df6'>{signaldBm} dB</span> <span color='#589df6'>⇵</span> {bandwidthUpBits}/{bandwidthDownBits}",
+		"format-wifi": "<span color='#589df6'></span> <span color='gray'> {essid}</span> {frequency}",
 		"format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
 		"format-linked": "{ifname} (No IP) ",
 		"format-disconnected": "Disconnected ⚠",
@@ -102,7 +96,7 @@
 	},
 	"clock": {
 		"interval": 1,
-		"format": "⏰ {:%H:%M:%S}",
+		"format": "{:%H:%M:%S}",
 		"tooltip-format": "{:%Y-%m-%d | %H:%M:%S}"
 		// "format-alt": "{:%Y-%m-%d}"
 	},
