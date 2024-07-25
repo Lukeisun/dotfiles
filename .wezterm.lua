@@ -1,5 +1,5 @@
 -- Pull in the wezterm API
-local wezterm = require 'wezterm'
+local wezterm = require("wezterm")
 
 -- This table will hold the configuration.
 local config = {}
@@ -14,18 +14,17 @@ end
 
 -- For example, changing the color scheme:
 config.hide_tab_bar_if_only_one_tab = true
-config.window_decorations = "TITLE"
-config.font = wezterm.font 'Iosevka'
-config.color_scheme = 'Atom'
-config.window_background_opacity = .75
-config.default_prog = { '/usr/bin/fish', '-l' }
+config.window_decorations = "NONE"
+config.font = wezterm.font("Iosevka Nerd Font Mono")
+config.color_scheme = "Atom"
+config.window_background_opacity = 0.75
+config.default_prog = { "/usr/bin/fish", "-l" }
 config.window_padding = {
 	left = 0,
 	right = 0,
 	top = 0,
 	bottom = 0,
 }
-config.enable_wayland = false
--- config.front_end = "WebGpu"
+config.front_end = "OpenGL"
 -- and finally, return the configuration to wezterm
 return config

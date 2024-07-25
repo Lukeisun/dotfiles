@@ -41,7 +41,7 @@
 	},
 	"temperature": {
 		"critical-threshold": 80,
-		"format": "<span color='#e88939'>{icon}</span> {temperatureF}°F",
+		"format": "<span color='#e88939'>{icon}</span> {temperatureC}°F",
 		"format-icons": ["", "", ""]
 	},
 	"cpu": {
