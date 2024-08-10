@@ -814,6 +814,17 @@ require('lazy').setup({
       -- vim.cmd.hi 'Comment gui=none'
     end,
   },
+  -- Lazy
+  {
+    'vague2k/huez.nvim',
+    -- if you want registry related features, uncomment this
+    import = 'huez-manager.import',
+    branch = 'stable',
+    event = 'UIEnter',
+    config = function()
+      require('huez').setup {}
+    end,
+  },
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
