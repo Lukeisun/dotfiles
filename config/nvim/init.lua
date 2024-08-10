@@ -427,6 +427,23 @@ require('lazy').setup({
       end, { desc = '[S]earch [N]eovim files' })
     end,
   },
+  {
+    'kawre/leetcode.nvim',
+    build = ':TSUpdate html',
+    lazy = 'leetcode.nvim' ~= vim.fn.argv()[1],
+    opts = { arg = 'leetcode.nvim' },
+    dependencies = {
+      'nvim-telescope/telescope.nvim',
+      'nvim-lua/plenary.nvim', -- required by telescope
+      'MunifTanjim/nui.nvim',
+
+      -- optional
+      'nvim-treesitter/nvim-treesitter',
+      'rcarriga/nvim-notify',
+      'nvim-tree/nvim-web-devicons',
+    },
+    -- configuration goes here
+  },
 
   { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
@@ -793,13 +810,13 @@ require('lazy').setup({
     end,
   },
   { 'catppuccin/nvim', priority = 1000 },
-
   -- honestly kinda like slate
   { -- You can easily change to a different colorscheme.
     -- Change the name of the colorscheme plugin below, and then
     -- change the command in the config to whatever the name of that colorscheme is.
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
+    'Lukeisun/nvimgelion-patch',
     'navarasu/onedark.nvim',
     -- 'catppuccin/nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
