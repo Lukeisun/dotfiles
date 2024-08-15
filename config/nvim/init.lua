@@ -816,6 +816,8 @@ require('lazy').setup({
     -- change the command in the config to whatever the name of that colorscheme is.
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
+    --
+    'RRethy/base16-nvim',
     'Lukeisun/nvimgelion-patch',
     'navarasu/onedark.nvim',
     -- 'catppuccin/nvim',
@@ -964,3 +966,9 @@ require('colorizer').setup()
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 require('lspconfig').zls.setup {}
+local pickers = require 'huez.pickers'
+
+vim.keymap.set('n', '<leader>co', pickers.themes, {})
+vim.keymap.set('n', '<leader>cof', pickers.favorites, {})
+vim.keymap.set('n', '<leader>col', pickers.live, {})
+vim.keymap.set('n', '<leader>coe', pickers.ensured, {})
