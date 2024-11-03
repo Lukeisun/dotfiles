@@ -4,7 +4,7 @@ SETUVAR --export ANDROID_HOME:/home/lukeisun/Android/Sdk
 SETUVAR --export EDITOR:nvim
 SETUVAR --export GIT_AUTHOR_EMAIL:delacruz\x40adinlukas\x2exyz
 SETUVAR --export GIT_AUTHOR_NAME:lukeisun
-SETUVAR --export GTK_THEME:Catppuccin\x2dMacchiato\x2dStandard\x2dSapphire\x2dDark
+SETUVAR --export PYENV_ROOT:/home/lukeisun/\x2epyenv
 SETUVAR --export QT_QPA_PLATFORM:wayland
 SETUVAR --export __NV_PRIME_RENDER_OFFLOAD:1
 SETUVAR __fish_initialized:3400
@@ -52,4 +52,4 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dreverse
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/home/lukeisun/dotfiles\x1e/home/lukeisun/Builds/zls/zig\x2dout/bin\x1e/home/lukeisun/Builds/zls\x1e/home/lukeisun/Builds/zig\x1e/home/lukeisun/Downloads/zig\x2dlinux\x2dx86_64\x2d0\x2e14\x2e0\x2ddev\x2e244\x2b0d79aa017\x1e/home/lukeisun/Android/Sdk/platform\x2dtools\x1e/home/lukeisun/Android/Sdk/emulator\x1e/home/Lukeisun/\x2ecargo/bin\x1e/usr/local/go/bin\x1e/usr/racket/bin\x1e/usr/racket\x1e/home/lukeisun/\x2edotnet\x1e/home/lukeisun/\x2ecargo/bin\x1e/home/lukeisun/racket/bin\x1e/home/lukeisun/\x2ebun/bin\x1e/home/lukeisun/go/bin
+SETUVAR fish_user_paths:/home/lukeisun/\x2elocal/bin\x1e/home/lukeisun/Builds/roc_nightly\x2dlinux_x86_64\x2d2024\x2d10\x2d12\x2d5646f82\x1e/home/lukeisun/\x2ezvm/bin\x1e/home/lukeisun/\x2ezvm/self\x1e/home/lukeisun/\x2epyenv/bin\x1e/home/lukeisun/Downloads/proto/bin\x1e/home/lukeisun/dotfiles\x1ex1e/home/lukeisun/Android/Sdk/platform\x2dtools\x1e/home/lukeisun/Android/Sdk/emulator\x1e/home/Lukeisun/\x2ecargo/bin\x1e/usr/local/go/bin\x1e/usr/racket/bin\x1e/usr/racket\x1e/home/lukeisun/\x2edotnet\x1e/home/lukeisun/\x2ecargo/bin\x1e/home/lukeisun/racket/bin\x1e/home/lukeisun/\x2ebun/bin\x1e/home/lukeisun/go/bin
