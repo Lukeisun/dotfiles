@@ -213,7 +213,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
-if not vim.loop.fs_stat(lazypath) then
+if not vim.uv.fs_stat(lazypath) then
   local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
   vim.fn.system { 'git', 'clone', '--filter=blob:none', '--branch=stable', lazyrepo, lazypath }
 end ---@diagnostic disable-next-line: undefined-field
@@ -655,7 +655,9 @@ require('lazy').setup({
             -- by the server configuration above. Useful when disabling
             -- certain features of an LSP (for example, turning off formatting for tsserver)
             server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-            require('lspconfig')[server_name].setup(server)
+            -- Use the new vim.lsp.config API for Neovim 0.11+
+            vim.lsp.config(server_name, server)
+            vim.lsp.enable(server_name)
           end,
         },
       }
@@ -916,8 +918,18 @@ require('lazy').setup({
 
       -- Prefer git instead of curl in order to improve connectivity in some environments
       require('nvim-treesitter.install').prefer_git = true
-      ---@diagnostic disable-next-line: missing-fields
-      require('nvim-treesitter.configs').setup(opts)
+
+      -- In nvim-treesitter for Neovim 0.10+, use the main module setup
+      -- The old require('nvim-treesitter.configs').setup() API was removed
+      require('nvim-treesitter').setup(opts)
+
+      -- Manually enable highlight and indent since the new API doesn't auto-enable them
+      -- from opts the same way. We ensure parsers are installed via opts.ensure_installed.
+      vim.api.nvim_create_autocmd('FileType', {
+        callback = function()
+          pcall(vim.treesitter.start)
+        end,
+      })
 
       -- There are additional nvim-treesitter modules that you can use to interact
       -- with nvim-treesitter. You should go explore a few and see what interests you:
@@ -972,7 +984,10 @@ require('lazy').setup({
 require('colorizer').setup()
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
-require('lspconfig').zls.setup {}
+
+-- Use the new vim.lsp.config API for Neovim 0.11+
+vim.lsp.config('zls', {})
+vim.lsp.enable('zls')
 local pickers = require 'huez.pickers'
 
 vim.keymap.set('n', '<leader>co', pickers.themes, {})
